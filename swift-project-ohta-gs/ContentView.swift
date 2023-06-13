@@ -9,8 +9,8 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var inputText: String = ""
-    @State private var shoppingItems: [ShoppingItem] = []
+    @State var inputText: String = ""
+    @State var shoppingItems: [ShoppingItem] = []
     
     var body: some View {
         // 縦に並べて表示
@@ -31,7 +31,8 @@ struct ContentView: View {
                 // Button(action: { ボタンがタップされた時の処理 }) { ボタンの表示内容（テキスト、イメージなど）}
                 Button(action: {
                     // ボタンを押した時に関数を呼び出す
-                    addItemsToList()
+                    // 関数を別ファイルに移動したため、引数名と引数を書く必要がある
+                    addItemsToList(inputText: &inputText, shoppingItems: &shoppingItems)
                 }) {
                     VStack(spacing: 10) {
                         // ボタンの名称
@@ -88,7 +89,8 @@ struct ContentView: View {
                                 print("index: \(index)")
                                 // ボタンを押した時に関数を呼び出す
                                 // 関数に引数を渡す場合、関数名（引数名：arg　値：index）となる、関数名は任意
-                                deleteItem(arg: index)
+                                // fromも引数名、&は参照渡しを行うため、関数内での変更が呼び出し元にも反映される
+                                deleteItem(arg: index, from: &shoppingItems)
                             }) {
                                 // システムのアイコン（ゴミ箱）を表示
                                 Image(systemName: "trash")
@@ -114,7 +116,7 @@ struct ContentView: View {
                                 // タップジェスチャー（タップイベント）を追加
                                 .onTapGesture {
                                     // タップされたら関数を呼び出す
-                                    toggleItemSelection(arg: index)
+                                    toggleItemSelection(arg: index, from: &shoppingItems)
                                 }
                         }
                     }
@@ -123,7 +125,7 @@ struct ContentView: View {
             }
             
             Button(action: {
-                removeAllSelectedItems()
+                removeAllSelectedItems(shoppingItems: &shoppingItems)
             }) {
                 HStack {
                     Image(systemName: "checkmark.square")
@@ -142,51 +144,7 @@ struct ContentView: View {
         }
         .padding()
     }
-    
-    
-
-    // 入力されたテキストを改行区切りで、買物リストに追加する
-    func addItemsToList() {
-        // 文字列を改行文字で分割してlinesに配列として格納
-        // 文字列.split(separator: 区切り文字)
-        let lines = inputText.split(separator: "\n")
-        // lines配列の各要素を、ShoppingItemのオブジェクトに変換し、それらのオブジェクトを、shoppingItems配列に追加
-        // mapは与えられたクロージャーを各要素に適用し、新しい配列を生成
-        // text: String($0) ・・・ ShoppingItemオブジェクトのtextは、現在処理しているlinesの要素String($0)を入れる
-        shoppingItems.append(contentsOf: lines.map { ShoppingItem(text: String($0)) })
-        // 下記のコードと同じ動作をする、下の方がわかりやすい
-//        shoppingItems.append(contentsOf: lines.map { line in
-//            return ShoppingItem(text: String(line))
-//        })
-//        print("shoppingItems: \(shoppingItems)")
-        inputText = ""
-    }
-    
-    // タップされた要素を削除する
-    func deleteItem(arg index: Int) {
-        // indexの番号に該当する要素を削除して、後ろにある要素は前に詰まる
-        shoppingItems.remove(at: index)
-    }
-    
-    // タップしたらisTappedを反転させる
-    func toggleItemSelection(arg index: Int) {
-        // 引数で渡された番号の配列の要素の、isTappedの値を反転させる
-        shoppingItems[index].isTapped.toggle()
-    }
-    
-    // shoppingItems 配列内の isTapped プロパティが true の要素をすべて削除
-    func removeAllSelectedItems() {
-        // removeALLメソッドは配列内の要素を順番に検査し、条件式が true を返す要素が見つかった場合、その要素が配列から削除
-        // 配列.removeAll { 条件 }
-        // removeAll(where:)は、指定した条件を満たす要素を削除
-        shoppingItems.removeAll(where: { $0.isTapped })
-        // 各要素(item)の、isTappedがtrueだったら削除
-//        shoppingItems.removeAll { item in
-//            return item.isTapped
-//        }
-    }
 }
-
 
 // ShoppingItem という名前の構造体を定義
 // ShoppingItem は Identifiable プロトコルと Equatable プロトコルに準拠

@@ -14,6 +14,7 @@
 		CE2926BD2A36DA330071CCFD /* swift_project_ohta_gsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2926BC2A36DA330071CCFD /* swift_project_ohta_gsTests.swift */; };
 		CE2926C72A36DA330071CCFD /* swift_project_ohta_gsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2926C62A36DA330071CCFD /* swift_project_ohta_gsUITests.swift */; };
 		CE2926C92A36DA330071CCFD /* swift_project_ohta_gsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2926C82A36DA330071CCFD /* swift_project_ohta_gsUITestsLaunchTests.swift */; };
+		CE2926D62A38404B0071CCFD /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2926D52A38404B0071CCFD /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CE2926C22A36DA330071CCFD /* swift-project-ohta-gsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-project-ohta-gsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2926C62A36DA330071CCFD /* swift_project_ohta_gsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_project_ohta_gsUITests.swift; sourceTree = "<group>"; };
 		CE2926C82A36DA330071CCFD /* swift_project_ohta_gsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_project_ohta_gsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE2926D52A38404B0071CCFD /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,9 @@
 		CE2926AA2A36DA320071CCFD /* swift-project-ohta-gs */ = {
 			isa = PBXGroup;
 			children = (
-				CE2926AB2A36DA320071CCFD /* swift_project_ohta_gsApp.swift */,
+				CE2926D52A38404B0071CCFD /* Functions.swift */,
 				CE2926AD2A36DA320071CCFD /* ContentView.swift */,
+				CE2926AB2A36DA320071CCFD /* swift_project_ohta_gsApp.swift */,
 				CE2926AF2A36DA330071CCFD /* Assets.xcassets */,
 				CE2926B12A36DA330071CCFD /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				CE2926AE2A36DA320071CCFD /* ContentView.swift in Sources */,
 				CE2926AC2A36DA320071CCFD /* swift_project_ohta_gsApp.swift in Sources */,
+				CE2926D62A38404B0071CCFD /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

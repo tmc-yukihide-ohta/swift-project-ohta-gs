@@ -24,6 +24,7 @@ struct ContentView: View {
                 TextEditor(text: $inputText)
                     // 隙間、高さ、枠線を設定
                     .padding()
+                    .font(.title2)
                     .frame(height: 110.0)
                     .border(Color.gray)
                 
@@ -95,6 +96,7 @@ struct ContentView: View {
                                 // システムのアイコン（ゴミ箱）を表示
                                 Image(systemName: "trash")
                                     // 隙間とアイコンや文字の色を指定
+                                    .font(.title)
                                     .padding()
                                     .foregroundColor(.red)
                                     // タップ領域を矩形領域に指定
@@ -102,8 +104,8 @@ struct ContentView: View {
                             }
                             Divider()
                             Text(shoppingItem.text)
+                                .font(.title2)
                                 .padding()
-                                .font(.headline)
                                 // 文字色の設定（条件演算子を利用：文字列をタップしたらtrue、Colorの色、それ以外flaseはblack）
                                 // 色はprimaryでも設定可能・・・システムのプライマリーカラー）
                                 .foregroundColor(shoppingItem.isTapped ? Color(red: 0.85, green: 0.85, blue: 0.85, opacity: 1.0) : .black)

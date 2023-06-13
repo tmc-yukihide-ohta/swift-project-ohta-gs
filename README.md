@@ -1,1 +1,0 @@
-# swift-project-ohta-gs

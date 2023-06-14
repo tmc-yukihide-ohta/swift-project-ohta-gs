@@ -47,7 +47,8 @@
 		CE2926C82A36DA330071CCFD /* swift_project_ohta_gsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_project_ohta_gsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE2926D52A38404B0071CCFD /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		CE2927142A393AF40071CCFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CE29276C2A3992E50071CCFD /* swift-project-ohta-gs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swift-project-ohta-gs"; sourceTree = "<group>"; };
+		CE29276C2A3992E50071CCFD /* swift-project-ohta-gs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "swift-project-ohta-gs"; sourceTree = "<group>"; };
+		CEF6398C2A3A793200A68E42 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 		CE29269F2A36DA320071CCFD = {
 			isa = PBXGroup;
 			children = (
+				CEF6398C2A3A793200A68E42 /* image.png */,
 				CE29276C2A3992E50071CCFD /* swift-project-ohta-gs */,
 				CE2927142A393AF40071CCFD /* README.md */,
 				CE2926AA2A36DA320071CCFD /* swift-project-ohta-gs */,

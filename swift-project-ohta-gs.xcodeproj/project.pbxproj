@@ -46,6 +46,7 @@
 		CE2926C62A36DA330071CCFD /* swift_project_ohta_gsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_project_ohta_gsUITests.swift; sourceTree = "<group>"; };
 		CE2926C82A36DA330071CCFD /* swift_project_ohta_gsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_project_ohta_gsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE2926D52A38404B0071CCFD /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		CE2927142A393AF40071CCFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 		CE29269F2A36DA320071CCFD = {
 			isa = PBXGroup;
 			children = (
+				CE2927142A393AF40071CCFD /* README.md */,
 				CE2926AA2A36DA320071CCFD /* swift-project-ohta-gs */,
 				CE2926BB2A36DA330071CCFD /* swift-project-ohta-gsTests */,
 				CE2926C52A36DA330071CCFD /* swift-project-ohta-gsUITests */,

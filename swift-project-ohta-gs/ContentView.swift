@@ -16,7 +16,7 @@ struct ContentView: View {
         // 縦に並べて表示
         VStack {
             // タイトル
-            Text("🛒お店にGo!!")
+            Text("🛒お店へGo!!")
                 .font(.largeTitle)
             // 横に並べて表示
             HStack {
